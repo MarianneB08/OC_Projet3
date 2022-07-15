@@ -49,7 +49,7 @@ header .main-title {
 
 .dishes-list {
   width: 100%;
-  height: 1500px;
+  height: 1550px;
   position: relative;
 }
 .dishes-list__imgcover {
@@ -60,7 +60,7 @@ header .main-title {
 }
 .dishes-list__dishes-wrapper {
   width: 100%;
-  height: 1200px;
+  height: 1250px;
   padding: 0 20px;
   background-color: rgb(240, 240, 240);
   border-top-left-radius: 35px;
@@ -87,7 +87,11 @@ header .main-title {
   right: 20px;
 }
 .dishes-list__dishes-wrapper .dishes-wrapper__title--icon .fa-solid {
+  background-color: linear-gradient(170deg, #FF79DA 0%, #FF79DA 4%, #9356DC 100%);
   visibility: hidden;
+}
+.dishes-list__dishes-wrapper .dishes-wrapper__title--icon .fa-solid:active {
+  visibility: visible;
 }
 .dishes-list__dishes-wrapper .dishes-wrapper__items {
   height: 330px;
@@ -112,6 +116,17 @@ header .main-title {
   position: absolute;
   left: 0;
   top: 21px;
+}
+.dishes-list__dishes-wrapper .specialparameter-2 {
+  height: 410px;
+}
+
+.specialparameter-3 {
+  height: 1650px;
+}
+
+.specialparameter-1 {
+  height: 1350px;
 }
 
 .item {
@@ -157,7 +172,7 @@ header .main-title {
   width: 180px;
   height: 50px;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 55px;
   background: linear-gradient(170deg, #FF79DA 0%, #FF79DA 4%, #9356DC 100%);
   color: #FFFFFF;
   border-radius: 30px;
@@ -201,4 +216,9 @@ footer .footer-wrapper i {
 footer .footer-wrapper .fa-handshake-angle {
   font-size: 14px;
   width: 14px;
+}
+
+.specialparameter-4 {
+  padding-top: 100px;
+  height: 200px;
 }/*# sourceMappingURL=menu.css.map */
