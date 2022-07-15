@@ -228,28 +228,22 @@ header .header__main-title {
   font-size: 25px;
   position: relative;
 }
-.card-restaurant-description-icon .fa-solid,
-.card-restaurant-description-icon .fa-regular {
+.card-restaurant-description-icon:hover .fa-solid, .card-restaurant-description-icon :active .fa-solid {
+  visibility: visible;
+  color: #99E2D0;
+  transition: color 1.5s ease-out;
+}
+.card-restaurant-description-icon .fa-heart {
   position: absolute;
   right: 30px;
 }
 .card-restaurant-description-icon .fa-regular {
   visibility: visible;
-  z-index: 2;
-  transition: 0.5s;
-}
-.card-restaurant-description-icon .fa-regular:active {
-  visibility: hidden;
-  z-index: 1;
+  opacity: 0.5;
 }
 .card-restaurant-description-icon .fa-solid {
   visibility: hidden;
-  z-index: 1;
-}
-.card-restaurant-description-icon .fa-solid:active {
-  visibility: visible;
-  background-color: linear-gradient(170deg, #FF79DA 0%, #FF79DA 4%, #9356DC 100%);
-  z-index: 2;
+  color: #FFFFFF;
 }
 
 footer {
