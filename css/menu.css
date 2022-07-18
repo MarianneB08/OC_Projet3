@@ -144,28 +144,91 @@ header .main-title {
   box-shadow: 0px 6px 14px -8px #000000;
 }
 .item__description {
+  width: 90%;
   padding: 10px;
   line-height: 1.4em;
 }
 .item__description--name {
   font-size: 18px;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
 }
 .item__description--details {
   font-size: 16px;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
 }
 .item__price {
+  width: 40px;
   position: absolute;
   right: 20px;
   top: 38px;
   font-weight: 700;
+  transform: translate();
+  transition: transform 0.5s;
 }
 .item__icon {
   visibility: hidden;
+  width: 20%;
+  height: 100%;
+  background-color: #99E2D0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
 }
-.item:active {
+.item__icon i {
+  color: #FFFFFF;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+@-webkit-keyframes check-bg {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes check-bg {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.item:hover > .item__icon {
   visibility: visible;
+  -webkit-animation-name: check-bg;
+          animation-name: check-bg;
+  -webkit-animation-duration: 3s forwards;
+          animation-duration: 3s forwards;
+}
+.item:hover > .item__icon > i {
+  transform: rotate(-360deg);
+}
+
+.item:hover > .item__price {
+  margin-right: 1px;
+  transform: translateX(-80px);
 }
 
 .dishes-list .cmd-btn {
