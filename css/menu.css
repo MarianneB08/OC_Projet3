@@ -140,8 +140,6 @@ header .header__main-title {
   justify-content: space-between;
   transition: 0.3s;
   overflow: hidden;
-  -webkit-animation: items-apparition 2s;
-          animation: items-apparition 2s;
 }
 .item:hover {
   box-shadow: 0px 6px 14px -8px #000000;
@@ -166,26 +164,6 @@ header .header__main-title {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: inherit;
-}
-@-webkit-keyframes items-apparition {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes items-apparition {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 .item__animation-check {
   display: flex;
@@ -223,6 +201,52 @@ header .header__main-title {
 }
 .item:hover > .item__animation-check .fa-circle-check {
   transform: rotate(0deg);
+}
+
+@-webkit-keyframes items-apparition {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes items-apparition {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animation-appear {
+  -webkit-animation: items-apparition;
+          animation: items-apparition;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animation-appear:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.animation-appear:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.animation-appear:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation-appear:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .dishes-list .cmd-btn {
