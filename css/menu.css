@@ -137,8 +137,9 @@ header .main-title {
   box-shadow: 0px 4px 10px -8px #000000;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
   transition: 0.3s;
+  overflow: hidden;
 }
 .item:hover {
   box-shadow: 0px 6px 14px -8px #000000;
@@ -164,71 +165,42 @@ header .main-title {
   white-space: nowrap;
   width: inherit;
 }
-.item__price {
-  width: 40px;
-  position: absolute;
-  right: 20px;
-  top: 38px;
-  font-weight: 700;
-  transform: translate();
-  transition: transform 0.5s;
+.item__animation-check {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  height: 70px;
+  margin-right: -160px;
+  transition: margin-right 0.8s;
 }
-.item__icon {
-  visibility: hidden;
-  width: 20%;
-  height: 100%;
+.item__animation-check .animation-check__price {
+  font-weight: bold;
+  margin-top: 35px;
+  width: 80px;
+  text-align: center;
+}
+.item__animation-check .animation-check__icon {
+  font-size: 20px;
+  color: #FFFFFF;
   background-color: #99E2D0;
+  width: 80px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  position: relative;
 }
-.item__icon i {
-  color: #FFFFFF;
-  font-size: 20px;
-  position: absolute;
-  top: 40%;
-  left: 40%;
+.item__animation-check .animation-check__icon .fa-circle-check {
+  transform: rotate(-225deg);
+  transition: transform 0.5s 0.3s;
+}
+
+.item:hover > .item__animation-check {
+  margin-right: 0;
+}
+.item:hover > .item__animation-check .fa-circle-check {
   transform: rotate(0deg);
-  transition: transform 0.5s;
-}
-
-@-webkit-keyframes check-bg {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes check-bg {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-.item:hover > .item__icon {
-  visibility: visible;
-  -webkit-animation-name: check-bg;
-          animation-name: check-bg;
-  -webkit-animation-duration: 3s forwards;
-          animation-duration: 3s forwards;
-}
-.item:hover > .item__icon > i {
-  transform: rotate(-360deg);
-}
-
-.item:hover > .item__price {
-  margin-right: 1px;
-  transform: translateX(-80px);
 }
 
 .dishes-list .cmd-btn {
