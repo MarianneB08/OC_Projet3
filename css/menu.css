@@ -43,8 +43,8 @@ header .fa-arrow-left {
   left: 10px;
   bottom: 18px;
 }
-header .main-title {
-  font-family: "Shrikhand", cursive;
+header .header__main-title {
+  width: 190px;
 }
 
 .dishes-list {
