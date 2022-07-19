@@ -140,6 +140,8 @@ header .header__main-title {
   justify-content: space-between;
   transition: 0.3s;
   overflow: hidden;
+  -webkit-animation: items-apparition 2s;
+          animation: items-apparition 2s;
 }
 .item:hover {
   box-shadow: 0px 6px 14px -8px #000000;
@@ -165,12 +167,32 @@ header .header__main-title {
   white-space: nowrap;
   width: inherit;
 }
+@-webkit-keyframes items-apparition {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes items-apparition {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .item__animation-check {
   display: flex;
   justify-content: space-between;
   width: 160px;
   height: 70px;
-  margin-right: -160px;
+  margin-right: -80px;
   transition: margin-right 0.8s;
 }
 .item__animation-check .animation-check__price {
