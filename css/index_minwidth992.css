@@ -1,0 +1,63 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+a:visited {
+  color: #000000;
+}
+
+li {
+  list-style-type: none;
+}
+
+.groupsections {
+  display: flex;
+  height: 400px;
+}
+.groupsections__concept {
+  height: 350px;
+  padding-top: 115px;
+  background-color: rgb(255, 255, 255);
+}
+.groupsections__functioning-title {
+  text-align: center;
+}
+
+.list-restaurants {
+  height: 700px;
+}
+.list-restaurants__title {
+  margin: 0 0 20px 30px;
+}
+
+.list-restaurants__wrapper {
+  height: 540px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+.list-restaurants__wrapper .card-restaurant {
+  width: 46%;
+}/*# sourceMappingURL=index_minwidth992.css.map */
