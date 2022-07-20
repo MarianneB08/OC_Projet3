@@ -149,6 +149,11 @@ header .header__main-title {
   padding: 10px;
   line-height: 1.4em;
 }
+@media screen and (max-width: 400px) {
+  .item__description {
+    width: 70%;
+  }
+}
 .item__description--name {
   font-size: 18px;
   font-weight: 700;
@@ -179,6 +184,18 @@ header .header__main-title {
   width: 80px;
   text-align: center;
 }
+@media screen and (max-width: 450px) {
+  .item__animation-check .animation-check__price {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .item__animation-check {
+    width: 100px;
+    margin-right: -50px;
+    transition: margin-right 0.8s;
+  }
+}
 .item__animation-check .animation-check__icon {
   font-size: 20px;
   color: #FFFFFF;
@@ -194,6 +211,11 @@ header .header__main-title {
 .item__animation-check .animation-check__icon .fa-circle-check {
   transform: rotate(-225deg);
   transition: transform 0.5s 0.3s;
+}
+@media screen and (max-width: 450px) {
+  .item__animation-check .animation-check__icon {
+    width: 50px;
+  }
 }
 
 .item:hover > .item__animation-check {
