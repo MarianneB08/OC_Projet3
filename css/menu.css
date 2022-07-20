@@ -135,87 +135,57 @@ header .header__main-title {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 0px 4px 10px -8px #000000;
+  transition: 0.3s;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  transition: 0.3s;
   overflow: hidden;
 }
 .item:hover {
   box-shadow: 0px 6px 14px -8px #000000;
 }
 .item__description {
-  width: 90%;
-  padding: 10px;
+  padding: 0 0 0 10px;
   line-height: 1.4em;
-}
-@media screen and (max-width: 400px) {
-  .item__description {
-    width: 70%;
-  }
+  overflow: hidden;
 }
 .item__description--name {
   font-size: 18px;
   font-weight: 700;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  width: inherit;
 }
 .item__description--details {
   font-size: 16px;
   font-weight: 300;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  width: inherit;
+}
+.item__price {
+  margin-left: auto;
+  margin-top: 25px;
+  padding: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 .item__animation-check {
   display: flex;
-  justify-content: space-between;
-  width: 160px;
-  height: 70px;
-  margin-right: -80px;
-  transition: margin-right 0.8s;
-}
-.item__animation-check .animation-check__price {
-  font-weight: bold;
-  margin-top: 35px;
-  width: 80px;
-  text-align: center;
-}
-@media screen and (max-width: 450px) {
-  .item__animation-check .animation-check__price {
-    width: 50px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .item__animation-check {
-    width: 100px;
-    margin-right: -50px;
-    transition: margin-right 0.8s;
-  }
-}
-.item__animation-check .animation-check__icon {
-  font-size: 20px;
-  color: #FFFFFF;
-  background-color: #99E2D0;
-  width: 80px;
-  height: 70px;
-  display: flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  flex-shrink: 0;
+  background-color: #99E2D0;
+  margin-right: -80px;
+  width: 80px;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  transition: margin-right 0.8s;
 }
-.item__animation-check .animation-check__icon .fa-circle-check {
+.item__animation-check .fa-circle-check {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
   transform: rotate(-225deg);
   transition: transform 0.5s 0.3s;
-}
-@media screen and (max-width: 450px) {
-  .item__animation-check .animation-check__icon {
-    width: 50px;
-  }
 }
 
 .item:hover > .item__animation-check {
