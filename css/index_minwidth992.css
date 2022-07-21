@@ -29,6 +29,37 @@ li {
   list-style-type: none;
 }
 
+header {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+header .header__main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .fa-arrow-left {
+  font-size: 25px;
+  position: absolute;
+  left: 10px;
+  bottom: 18px;
+}
+header .header__main-title {
+  width: 190px;
+}
+
 .groupsections {
   display: flex;
   height: 400px;
