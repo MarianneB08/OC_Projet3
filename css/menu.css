@@ -227,12 +227,8 @@ li {
   }
 }
 .animation-appear {
-  -webkit-animation: items-apparition;
-          animation: items-apparition;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-animation: items-apparition 1.5s both;
+          animation: items-apparition 1.5s both;
 }
 .animation-appear:nth-child(1) {
   -webkit-animation-delay: 0.2s;
@@ -309,7 +305,7 @@ li {
     width: 350px;
     height: 50px;
     margin: 0 auto;
-    margin-top: 55px;
+    margin-top: 50px;
     background: linear-gradient(170deg, #9356DC, #FF79DA);
     color: #FFFFFF;
     border-radius: 30px;
@@ -318,7 +314,6 @@ li {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    margin-top: 50px;
   }
   .dishes-list .cmd-btn:hover {
     opacity: 0.8;
@@ -441,7 +436,7 @@ header .header__main-title {
   align-items: center;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
   .groupsections {
     display: flex;
     height: 400px;
@@ -450,6 +445,9 @@ header .header__main-title {
     max-height: 350px;
     padding-top: 90px;
     background-color: rgb(255, 255, 255);
+  }
+  .groupsections__concept-title, .groupsections__concept-description {
+    min-width: 200px;
   }
   .groupsections__concept-btn {
     width: 220px;
@@ -493,7 +491,7 @@ header .header__main-title {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
   .list-restaurants {
     height: 700px;
   }
